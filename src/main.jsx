@@ -98,7 +98,7 @@ function App() {
     <a className="skip-link" href="#main">Skip to content</a>
     <header className="header wrap">
       <a className="wordmark" href="#" aria-label="Taha Pourhassani home">TP<span>.</span></a>
-      <nav aria-label="Main navigation"><a href="#work">Selected work</a><a href="#about">About</a><a href="#resume">Resume</a><a className="nav-contact" href="#contact">Let’s connect <Arrow /></a></nav>
+      <nav aria-label="Main navigation"><a href="#work">Selected work</a><a href="#about">About</a><a href="#resume">Resume</a><a className="nav-contact" href="#contact">Let’s connect</a></nav>
     </header>
     <main id="main">
       <section className="hero" aria-labelledby="hero-title">
@@ -110,7 +110,7 @@ function App() {
             <h1 id="hero-title">Taha<br /><span>Pourhassani</span></h1>
             <p className="headline">Computer Engineer <span>|</span> Generative AI &amp; Visual Media Producer</p>
             <p className="bio">I'm Taha, a Computer Engineering graduate and master’s student based in Paris. I bring together technical project as a generative AI and visual media producer.</p>
-            <div className="hero-actions"><a className="button primary" href="#work">Explore My Work <Arrow /></a><a className="button secondary" href={cvUrl} download>Download CV <span aria-hidden="true">↓</span><span className="sr-only"> (PDF)</span></a></div>
+            <div className="hero-actions"><a className="button primary" href="#work">Explore My Work</a><a className="button secondary" href={cvUrl} download>Download CV <span className="sr-only"> (PDF)</span></a></div>
           </div>
           <div className="hero-bottom"><span>ENGINEERING × CREATIVE INTELLIGENCE</span><a href="#work">Scroll to explore <span aria-hidden="true">↓</span></a></div>
         </div>
@@ -123,7 +123,7 @@ function App() {
               <ProjectCover project={project} />
               <span className="cover-number">{project.id}</span><span className="cover-action">{project.video ? 'View film' : project.slides ? 'View 4 slides' : 'Explore project'} <Arrow /></span>
             </button>
-            <div className="project-meta"><p className="eyebrow">{project.category}</p><span aria-hidden="true">↗</span></div>
+            <div className="project-meta"><p className="eyebrow">{project.category}</p></div>
             <h3><button onClick={() => openProject(project)}>{project.title}</button></h3>
             <p className="project-description">{project.description}</p>
             <p className="project-role">{project.role}</p>
@@ -132,7 +132,7 @@ function App() {
       </section>
       <section id="about" className="about wrap" aria-labelledby="about-title"><p className="eyebrow">02 / About me</p><div className="about-grid"><div><h2 id="about-title">Background</h2><div className="disciplines"><span>Computer Engineering</span><span>Generative AI</span><span>Visual Media</span></div></div><div className="about-copy"><p>I’m Taha Pourhassani, a Computer Engineering graduate currently studying Telecommunication and Network at Le Cnam in Paris.</p><p>My work connects technical problem-solving with visual storytelling. At ASA Advertising Agency, I created social media posts, Instagram reels and AI-assisted content within a team serving more than 20 clients. I also designed large-format billboards displayed around the city.</p><p>Alongside creative production, my technical work spans Python networking, inventory management and AVR microcontroller systems. My final academic project explored biomedical NLP through the study and presentation of an existing research case study.</p><a className="text-link" href="#resume">Read my resume <Arrow /></a></div></div></section>
       <Resume />
-      <section id="contact" className="contact wrap" aria-labelledby="contact-title"><p className="eyebrow">04 / Connect</p><div className="contact-row"><div><h2 id="contact-title">Let’s make<br /><em>something matter.</em></h2><p className="contact-note">For creative work, technical projects or a conversation.</p></div><div className="contact-options"><a className="button primary" href="mailto:pourhasani80@gmail.com">Email me <Arrow /></a><SocialLinks /></div></div></section>
+      <section id="contact" className="contact wrap" aria-labelledby="contact-title"><p className="eyebrow">04 / Connect</p><div className="contact-row"><div><h2 id="contact-title">Let’s make<br /><em>something matter.</em></h2><p className="contact-note">For creative work, technical projects or a conversation.</p></div><div className="contact-options"><a className="button primary" href="mailto:pourhasani80@gmail.com">Email me</a><SocialLinks /></div></div></section>
     </main>
     <footer className="wrap footer"><a className="wordmark" href="#" aria-label="Taha Pourhassani home">TP<span>.</span></a><p>© {new Date().getFullYear()} Taha Pourhassani</p><a href="#main">Back to top ↑</a></footer>
     <dialog ref={dialog} aria-labelledby="project-dialog-title" className="project-dialog" onClick={e => { if(e.target === e.currentTarget) closeProject() }} onCancel={closeProject}>
