@@ -42,3 +42,15 @@
 @media(max-width:359px){.header nav{gap:12px;font-size:10px}.headline{font-size:12px}.language-list>div{flex-wrap:wrap}.language-list dd{text-align:left}}
 /* Keep the keyboard skip link off screen unless it has visible keyboard focus. */
 .skip-link{top:10px;transform:translateY(calc(-100% - 20px))}.skip-link:focus:not(:focus-visible){transform:translateY(calc(-100% - 20px))}.skip-link:focus-visible{transform:translateY(0)}
+
+/* Natural spacing for the hero name. */
+#hero-title{letter-spacing:normal;line-height:1.12}
+@media(max-width:600px){#hero-title{font-size:clamp(42px,10.8vw,58px)}}
+
+
+
+/* Divide the two resume columns while they are side by side. */
+.resume-grid{position:relative}.resume-grid::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:#8caaa7;transform:translateX(-50%)}
+@media(max-width:600px){.resume-grid::before{display:none}}
+
+.skill-list>div:not(:last-child){padding-bottom:19px;border-bottom:1px solid #ffffff10}
