@@ -121,7 +121,7 @@ function App() {
           {projects.map(project => <article className="project" key={project.id}>
             <button className={`project-cover ${project.video ? 'film-cover' : ''}`} onClick={() => openProject(project)} aria-label={`View ${project.title}`}>
               <ProjectCover project={project} />
-              <span className="cover-number">{project.id}</span><span className="cover-action">View <Arrow /></span>
+              <span className="cover-number">{project.id}</span><span className="cover-action">View</span>
             </button>
             <div className="project-meta"><p className="eyebrow">{project.category}</p></div>
             <h3><button onClick={() => openProject(project)}>{project.title}</button></h3>
