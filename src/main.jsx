@@ -37,14 +37,14 @@ const cvUrl = '/resume/Taha-Pourhassani-CV.pdf'
 const linkedInUrl = 'https://www.linkedin.com/in/taha-pourhassani-2266b6228/'
 
 const socialProfiles = [
-  { name: 'Instagram', icon: 'instagram', url: 'https://www.instagram.com/tahaprhs' },
-  { name: 'Telegram', icon: 'telegram', url: 'https://t.me/tahaphs' },
-  { name: 'Spotify', icon: 'spotify', url: 'https://open.spotify.com/user/taha_pourhasani' },
-  { name: 'Clubhouse', icon: 'clubhouse', url: 'https://www.clubhouse.com/@tahaphs' },
-  { name: 'GitHub', icon: 'github', url: 'https://github.com/tahapourhasani' },
-  { name: 'X', icon: 'x', url: 'https://x.com/tahapourhassani' },
-  { name: 'WhatsApp', icon: 'whatsapp', url: 'https://wa.me/33755794222' },
   { name: 'LinkedIn', icon: 'linkedin', url: linkedInUrl },
+  { name: 'Instagram', icon: 'instagram', url: 'https://www.instagram.com/tahaprhs' },
+  { name: 'WhatsApp', icon: 'whatsapp', url: 'https://wa.me/33755794222' },
+  { name: 'X', icon: 'x', url: 'https://x.com/tahapourhassani' },
+  { name: 'GitHub', icon: 'github', url: 'https://github.com/tahapourhasani' },
+  { name: 'Telegram', icon: 'telegram', url: 'https://t.me/tahaphs' },
+  { name: 'Clubhouse', icon: 'clubhouse', url: 'https://www.clubhouse.com/@tahaphs' },
+  { name: 'Spotify', icon: 'spotify', url: 'https://open.spotify.com/user/taha_pourhasani' },
 ]
 
 function SocialIcon({ name }) {
