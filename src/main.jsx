@@ -41,8 +41,8 @@ const socialProfiles = [
   { name: 'Instagram', icon: 'instagram', url: 'https://www.instagram.com/tahaprhs' },
   { name: 'WhatsApp', icon: 'whatsapp', url: 'https://wa.me/33755794222' },
   { name: 'X', icon: 'x', url: 'https://x.com/tahapourhassani' },
-  { name: 'GitHub', icon: 'github', url: 'https://github.com/tahapourhasani' },
-  { name: 'Telegram', icon: 'telegram', url: 'https://t.me/tahaphs' },
+  { name: 'GitHub', icon: 'github', url: 'https://github.com/tahapourhassani' },
+  { name: 'Telegram', icon: 'telegram', url: 'https://t.me/pourhassanitaha' },
   { name: 'Clubhouse', icon: 'clubhouse', url: 'https://www.clubhouse.com/@tahaphs' },
   { name: 'Spotify', icon: 'spotify', url: 'https://open.spotify.com/user/taha_pourhasani' },
 ]
