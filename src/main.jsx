@@ -3,20 +3,20 @@ import { createRoot } from 'react-dom/client'
 import './style.css'
 
 const projects = [
-  { id: '01', category: 'AI-Assisted Video Production', title: 'Automotive in Motion', image: 'automotive-cover.png', video: 'automotive.mp4', alt: 'Black Toyota SUV on a sunlit forest road', caption: 'AI-assisted automotive client film', description: 'AI-assisted camera movements bring a new perspective to an automotive showcase.', role: 'AI-assisted camera movement', detail: 'I contributed AI-assisted camera movements to an automotive showcase for an auto gallery client, creating the opening arc and most zoom-in and zoom-out movements from supplied footage. Original filming and final editing were handled by others. Client name and remaining production credits have not been supplied.', tags: ['AI camera movement', 'Client work'] },
+  { id: '01', category: 'AI-Assisted Video Production', title: 'Automotive in Motion', image: 'automotive-cover.png', video: 'automotive.mp4', alt: 'Black Toyota SUV on a sunlit forest road', caption: 'AI-assisted automotive client film', description: 'AI-assisted camera movements bring a new perspective to an automotive showcase.', role: 'AI-assisted camera movement', detail: 'I contributed AI-assisted camera movements to an automotive showcase for an auto gallery client, creating the opening arc and most zoom-in and zoom-out movements from supplied footage. Original filming and final editing were handled by others. ', tags: ['AI camera movement', 'Client work'] },
   { id: '02', category: 'AI Product Visuals & Creative Experiments', title: 'YANI — Tabriz Perfume Reveal', image: 'tabriz-cover.png', video: 'yani-tabriz.mp4', alt: 'Tabriz perfume bottle beside the clock tower in Saat Square', caption: 'AI-generated perfume reveal', description: 'A cinematic product reveal connecting a fragrance to the city that inspired it.', role: 'Concept, AI image & video generation, editing', detail: 'An AI-generated perfume reveal for YANI’s Tabriz fragrance, set in Saat Square. Drones lift patterned fabric to unveil an oversized bottle, connecting the product to its namesake city. I developed the concept and handled the full production, including image generation, video generation and editing.', tags: ['Generative AI', 'Visual storytelling'] },
-  { id: '03', category: 'Natural Language Processing', title: 'Biomedical NLP for Cancer Research', image: 'nlp-classifier.jpg', slides: [{image:'nlp-classifier.jpg', title:'Entity Relation Classifier'}, {image:'nlp-methodology.jpg', title:'Research Methodology'}, {image:'nlp-supervision.jpg', title:'Distant Supervision'}, {image:'nlp-results.jpg', title:'Final Results'}], alt: 'Presentation slide explaining sentence-level miRNA–gene relation classification', caption: 'Adapted research presentation slide', description: 'An academic review of how NLP can extract miRNA–gene relationships from biomedical literature.', role: 'Research review & presentation', detail: 'I researched and presented a Microsoft/Miroculus case study on extracting relationships between microRNAs and genes from biomedical literature. My contribution is the study and presentation of its methods and findings, including distant supervision and text classification. The model implementation and reported benchmark results belong to the cited study. This work concerns literature analysis, not a clinically validated diagnosis system.', source: 'https://devblogs.microsoft.com/ise/training-a-classifier-for-relation-extraction-from-medical-literature/', tags: ['Research synthesis', 'NLP'] },
+  { id: '03', category: 'Natural Language Processing', title: 'Biomedical NLP for Cancer Research', image: 'nlp-classifier.jpg', slides: [{image:'nlp-classifier.jpg', title:'Entity Relation Classifier'}, {image:'nlp-methodology.jpg', title:'Research Methodology'}, {image:'nlp-supervision.jpg', title:'Distant Supervision'}, {image:'nlp-results.jpg', title:'Final Results'}], alt: 'Presentation slide explaining sentence-level miRNA–gene relation classification', caption: 'Adapted research presentation slide', description: 'An academic review of how NLP can extract miRNA–gene relationships from biomedical literature.', role: 'Final academic project · Research & presentation', detail: 'I researched and presented a Microsoft/Miroculus case study on extracting relationships between microRNAs and genes from biomedical literature. This was my final academic project, recognised as a top project by the Head of Computer Engineering at Islamic Azad University, Tabriz. My contribution is the study and presentation of its methods and findings, including distant supervision and text classification. The model implementation and reported benchmark results belong to the cited study. This work concerns literature analysis, not a clinically validated diagnosis system.', source: 'https://devblogs.microsoft.com/ise/training-a-classifier-for-relation-extraction-from-medical-literature/', tags: ['Research synthesis', 'NLP'] },
   { id: '04', category: 'Computer Vision', title: 'Hand Tracking', image: 'hand-tracking.jpg', video: 'hand-tracking.mp4', alt: 'Illustrative laptop mockup showing hand landmarks', caption: 'AI-generated project illustration and animation', description: 'Exploring hand tracking and visual interaction through computer vision.', role: 'Computer vision project', detail: 'An exploration of hand tracking and visual interaction. The cover and animated film are AI-generated project illustrations, rather than recordings of the application. Project source code remains private.', tags: ['Computer vision', 'Human–computer interaction'] },
 ]
 
-function Arrow({ diagonal = false }) { return <span aria-hidden="true">{diagonal ? '↗' : '↗'}</span> }
+function Arrow() { return <span aria-hidden="true">↗</span> }
 
 function ProjectCover({ project }) {
   if (project.slides) return <div className="nlp-cover" aria-label="Biomedical NLP research cover">
     <span className="eyebrow">Research / Language / Discovery</span>
     <div className="relation-art" aria-hidden="true"><span>miRNA</span><i /><span>gene</span></div>
     <strong>Biomedical NLP<br /><em>for Cancer Research</em></strong>
-    <small>Research review & presentation · 4 slides</small>
+    <small>Final academic project · 4 slides</small>
   </div>
   return <><img src={`/media/${project.image}`} alt={project.alt} loading="lazy" width="1200" height="675" />{project.video && <span className="poster-title"><small>{project.category}</small><strong>{project.title}</strong></span>}</>
 }
@@ -33,6 +33,35 @@ function ProjectMedia({ project }) {
   return <img src={`/media/${project.image}`} alt={project.alt} />
 }
 
+const cvUrl = '/resume/Taha-Pourhassani-CV.pdf'
+const linkedInUrl = 'https://www.linkedin.com/in/taha-pourhassani-2266b6228/'
+
+function Resume() {
+  return <section id="resume" className="resume wrap" aria-labelledby="resume-title">
+    <div className="section-top resume-heading"><div><p className="eyebrow">03 / Resume</p><h2 id="resume-title">Experience &amp; <em>education.</em></h2></div><a className="button secondary" href={cvUrl} download>Download CV <span aria-hidden="true">↓</span><span className="sr-only"> (PDF)</span></a></div>
+    <div className="resume-grid">
+      <div className="resume-column">
+        <h3 className="resume-label">Professional experience</h3>
+        <article className="resume-entry"><p className="resume-date">2025–2026 <span> / ASA Advertising Agency</span></p><h4>Digital Content Producer<br />&amp; AI Content Creator</h4><ul><li>Created social media content within an agency serving more than 20 clients across various industries.</li><li>Produced social media posts and Instagram reels, including AI-assisted content.</li><li>Designed large-format billboards displayed around the city.</li></ul></article>
+        <article className="resume-entry"><p className="resume-date">2024 <span> / Ata Varagh Azarbaijan · Tabriz, Iran</span></p><h4>Internship</h4><p>Internship involving an online examination system.</p></article>
+        <h3 className="resume-label">Education</h3>
+        <article className="resume-entry"><p className="resume-date">September 2026–September 2027 <span> / Expected</span></p><h4>Master’s in Telecommunication and Network <span className="degree-level">M1</span></h4><p>Le Cnam · Paris, France</p></article>
+        <article className="resume-entry"><p className="resume-date">2020–2025</p><h4>B.Sc. Computer Engineering<br />– Information Technology</h4><p>Islamic Azad University · Tabriz, Iran</p></article>
+      </div>
+      <div className="resume-column">
+        <h3 className="resume-label">Skills</h3>
+        <dl className="skill-list"><div><dt>Programming</dt><dd>Python; C for AVR projects. Familiarity with C++ and C#.</dd></div><div><dt>Web &amp; data</dt><dd>WordPress theme editing, plugins and content design; MySQL.</dd></div><div><dt>Creative</dt><dd>AI image and video generation for social media and content creation.</dd></div><div><dt>Tools</dt><dd>VS Code, Navicat, Cisco Packet Tracer, CodeVision, Proteus, Microsoft Office; basic Adobe Photoshop.</dd></div></dl>
+        <h3 className="resume-label">Languages</h3><dl className="language-list"><div><dt>Persian &amp; Turkish</dt><dd>Native</dd></div><div><dt>English</dt><dd>Fluent · IELTS Academic 6.5</dd></div><div><dt>German</dt><dd>A2</dd></div></dl>
+        <h3 className="resume-label">Leadership &amp; honors</h3>
+        <article className="resume-entry"><p className="resume-date">2023–2025</p><h4>Head of Computer Engineering Scientific Association</h4><p>Islamic Azad University, Tabriz. Organised student workshops, seminars and academic events; coordinated student teams and communications.</p></article>
+        <article className="resume-entry"><p className="resume-date">11th RINOTEX Technology Exhibition</p><h4>Selected University Representative</h4><p>Selected to represent Islamic Azad University, Tabriz.</p></article>
+      </div>
+    </div>
+    <div className="academic-project"><div><p className="eyebrow">Final academic project</p><h3>Biomedical NLP<br /><em>for Cancer Research</em></h3><span className="recognition-tag">Recognised as a top project</span></div><div><p>Studied and presented a Microsoft/Miroculus case study on extracting miRNA–gene relationships from biomedical literature, explaining distant supervision, text features and logistic regression.</p><p>Recognised as a top project by the Head of Computer Engineering at Islamic Azad University, Tabriz. My contribution was research synthesis and presentation of the existing study’s methods and findings.</p><a className="text-link" href="#work">Explore the project <Arrow /></a></div></div>
+    <details className="engineering-details"><summary>Engineering projects <span aria-hidden="true">+</span></summary><div className="engineering-grid"><article><h4>AVR Microcontroller Systems</h4><p className="resume-date">Course project · C, CodeVision, Proteus</p><p>Developed and simulated control systems including temperature sensing, traffic lights, clocks, timers and a digital door lock.</p></article><article><h4>Warehouse Management System</h4><p className="resume-date">Class project · Python</p><p>Built a system for tracking inventory and orders, with a simple database schema and features for querying and updating stock.</p></article><article><h4>Round-Trip Time Measurement Tool</h4><p className="resume-date">Class project · Python sockets</p><p>Created a client-server tool to measure response times and explore network latency.</p></article><article><h4>Proxy Server</h4><p className="resume-date">Personal project · Python sockets</p><p>Developed a basic proxy server with request filtering and logging.</p></article></div></details>
+  </section>
+}
+
 function App() {
   const dialog = useRef(null)
   const [active, setActive] = useState(null)
@@ -42,7 +71,7 @@ function App() {
     <a className="skip-link" href="#main">Skip to content</a>
     <header className="header wrap">
       <a className="wordmark" href="#" aria-label="Taha Pourhassani home">TAHA<span>.</span></a>
-      <nav aria-label="Main navigation"><a href="#work">Selected work</a><a href="#about">About</a><a className="nav-contact" href="#contact">Let’s connect <Arrow /></a></nav>
+      <nav aria-label="Main navigation"><a href="#work">Selected work</a><a href="#about">About</a><a href="#resume">Resume</a><a className="nav-contact" href="#contact">Let’s connect <Arrow /></a></nav>
     </header>
     <main id="main">
       <section className="hero" aria-labelledby="hero-title">
@@ -52,9 +81,9 @@ function App() {
           <div className="hero-copy">
             <p className="eyebrow"><span className="status-dot" /> Paris, France <span className="eyebrow-divider">/</span> Technology meets imagination</p>
             <h1 id="hero-title">Taha<br /><span>Pourhassani</span><span className="name-dot">.</span></h1>
-            <p className="headline">Creative Technologist <span>|</span> Generative AI Creator <span>|</span> Computer Engineer</p>
-            <p className="bio">I'm Taha, a Paris-based creative technologist with a background in Computer Engineering and professional experience in AI-driven media production. My work brings together generative AI, visual storytelling, and software engineering.</p>
-            <div className="hero-actions"><a className="button primary" href="#work">Explore My Work <Arrow /></a><button className="button secondary" disabled title="The résumé PDF will be added soon">Resume coming soon <span aria-hidden="true">↓</span></button></div>
+            <p className="headline">Computer Engineer <span>|</span> Generative AI &amp; Visual Media Producer</p>
+            <p className="bio">I'm Taha, a Computer Engineering graduate and master’s student based in Paris. I bring together technical project work, generative AI and visual storytelling.</p>
+            <div className="hero-actions"><a className="button primary" href="#work">Explore My Work <Arrow /></a><a className="button secondary" href={cvUrl} download>Download CV <span aria-hidden="true">↓</span><span className="sr-only"> (PDF)</span></a></div>
           </div>
           <div className="hero-bottom"><span>ENGINEERING × CREATIVE INTELLIGENCE</span><a href="#work">Scroll to explore <span aria-hidden="true">↓</span></a></div>
         </div>
@@ -74,12 +103,13 @@ function App() {
           </article>)}
         </div>
       </section>
-      <section id="about" className="about wrap" aria-labelledby="about-title"><p className="eyebrow">02 / At the intersection</p><div className="about-grid"><h2 id="about-title">A technical mind.<br /><em>A creative perspective.</em></h2><div><p>My work brings together generative AI, visual storytelling, and software engineering.</p><div className="disciplines"><span>Computer Engineering</span><span>Generative AI</span><span>AI-driven Media</span></div></div></div></section>
-      <section id="contact" className="contact wrap" aria-labelledby="contact-title"><p className="eyebrow">03 / Connect</p><div className="contact-row"><h2 id="contact-title">Let’s make<br /><em>something matter.</em></h2><a className="button primary" href="https://github.com/tahapourhassani" target="_blank" rel="noreferrer">Connect on GitHub <Arrow /></a></div></section>
+      <section id="about" className="about wrap" aria-labelledby="about-title"><p className="eyebrow">02 / About me</p><div className="about-grid"><div><h2 id="about-title">A technical mind.<br /><em>A creative perspective.</em></h2><p className="about-location">Based in Paris, France</p><div className="disciplines"><span>Computer Engineering</span><span>Generative AI</span><span>Visual Media</span></div></div><div className="about-copy"><p>I’m Taha Pourhassani, a Computer Engineering graduate currently studying Telecommunication and Network at Le Cnam in Paris.</p><p>My work connects technical problem-solving with visual storytelling. At ASA Advertising Agency, I created social media posts, Instagram reels and AI-assisted content within a team serving more than 20 clients. I also designed large-format billboards displayed around the city.</p><p>Alongside creative production, my technical work spans Python networking, inventory management and AVR microcontroller systems. My final academic project explored biomedical NLP through the study and presentation of an existing research case study.</p><a className="text-link" href="#resume">Read my resume <Arrow /></a></div></div></section>
+      <Resume />
+      <section id="contact" className="contact wrap" aria-labelledby="contact-title"><p className="eyebrow">04 / Connect</p><div className="contact-row"><div><h2 id="contact-title">Let’s make<br /><em>something matter.</em></h2><p className="contact-note">For creative work, technical projects or a conversation.</p></div><div className="contact-options"><a className="button primary" href="mailto:pourhasani80@gmail.com">Email me <Arrow /></a><a className="email-address" href="mailto:pourhasani80@gmail.com">pourhasani80@gmail.com</a><div className="social-links"><a href={linkedInUrl} target="_blank" rel="noreferrer">LinkedIn <Arrow /></a><a href="https://github.com/tahapourhassani" target="_blank" rel="noreferrer">GitHub <Arrow /></a></div></div></div></section>
     </main>
     <footer className="wrap footer"><a className="wordmark" href="#">TAHA<span>.</span></a><p>© {new Date().getFullYear()} Taha Pourhassani</p><a href="#main">Back to top ↑</a></footer>
-    <dialog ref={dialog} className="project-dialog" onClick={e => { if(e.target === e.currentTarget) closeProject() }} onCancel={closeProject}>
-      {active && <div className="dialog-content"><button className="close-dialog" onClick={closeProject} aria-label="Close project">✕</button><p className="eyebrow">{active.category}</p><h2>{active.title}</h2><ProjectMedia key={active.id} project={active} /><p className="media-caption">{active.caption}</p><p className="detail-role">{active.role}</p><p className="detail-copy">{active.detail}</p>{active.source && <a className="source-link" href={active.source} target="_blank" rel="noreferrer">Read the original Microsoft/Miroculus case study ↗</a>}<div className="disciplines">{active.tags.map(tag=><span key={tag}>{tag}</span>)}</div></div>}
+    <dialog ref={dialog} aria-labelledby="project-dialog-title" className="project-dialog" onClick={e => { if(e.target === e.currentTarget) closeProject() }} onCancel={closeProject}>
+      {active && <div className="dialog-content"><button className="close-dialog" onClick={closeProject} aria-label="Close project">✕</button><p className="eyebrow">{active.category}</p><h2 id="project-dialog-title">{active.title}</h2><ProjectMedia key={active.id} project={active} /><p className="media-caption">{active.caption}</p><p className="detail-role">{active.role}</p><p className="detail-copy">{active.detail}</p>{active.source && <a className="source-link" href={active.source} target="_blank" rel="noreferrer">Read the original Microsoft/Miroculus case study ↗</a>}<div className="disciplines">{active.tags.map(tag=><span key={tag}>{tag}</span>)}</div></div>}
     </dialog>
   </>
 }

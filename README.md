@@ -1,6 +1,6 @@
 # Taha Pourhassani — Personal Website
 
-React + Vite + Tailwind CSS. Phase 2 homepage.
+React + Vite + Tailwind CSS. Personal portfolio, About and Resume.
 
 ## Open the local preview
 
@@ -24,9 +24,15 @@ npm run preview
 
 ## Current milestone
 
-The initial homepage is implemented locally using the exact approved headline, biography and palette, with generated Moai/Eiffel hero art, four project panels, a four-slide research gallery and three playable films. The résumé PDF is pending; its button is intentionally disabled and says Resume coming soon.
+The portfolio includes four project panels, a four-slide research gallery, three playable films, About, a complete online Resume and email/LinkedIn/GitHub contact links. Both CV buttons download `public/resume/Taha-Pourhassani-CV.pdf`.
 
-Desktop/mobile browser checks cover 1440, 768, 390 and 320 pixels, image loading, film metadata, dialog closing, and browser errors. Deployment uses GitHub Actions to build the site and publish `dist` to GitHub Pages whenever `main` changes. Live address: https://tahapourhassani.github.io/. The résumé PDF remains pending.
+The public PDF is exported directly from the user's final approved Word CV, kept outside this repository. For future updates, export that Word document without rebuilding from earlier draft scripts. The current education entry is M1, September 2026–September 2027 expected. No phone number, street address or third-party reference details are published.
+
+Build with `npm run build`. GitHub Actions builds and deploys `dist` to GitHub Pages on pushes to `main`. Live address: https://tahapourhassani.github.io/.
+
+## Validation
+
+Check desktop, tablet and mobile widths for horizontal overflow and image loading. Check navigation, both PDF downloads, the engineering-project disclosure, all four research slides, video playback metadata and dialog closing by button/Escape. Confirm the downloaded CV matches the approved Word source and review its pages after any export.
 
 ## Public content boundaries
 

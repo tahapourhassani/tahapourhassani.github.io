@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tahapourhassani.github.io/sitemap.xml
