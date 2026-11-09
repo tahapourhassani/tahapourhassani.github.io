@@ -58,3 +58,5 @@
 /* Icon-only social profile links remain labelled for assistive technology. */
 .social-icons{display:flex;flex-wrap:wrap;gap:10px;max-width:422px;margin-top:3px}.social-icons a{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #ffffff24;border-radius:50%;color:#acc5c2;background:#10242a;transition:color .2s,border-color .2s,background .2s}.social-icons a:hover{color:#b5ffe2;background:#134032;border-color:#34d39988}.social-icons svg{display:block;flex-shrink:0}.contact-options{min-width:0}.social-icons a:focus-visible{outline:2px solid #34d399;outline-offset:4px}
 @media(max-width:900px){.social-icons{max-width:206px}}
+
+.header .nav-contact{border:1px solid #34d399;border-radius:4px;padding:10px 16px;justify-content:center;box-shadow:0 0 10px #34d39925,inset 0 0 8px #34d3990d}.header .nav-contact:hover{background:#34d39912;box-shadow:0 0 15px #34d39940}.contact-options>.button{justify-content:center;text-align:center}
