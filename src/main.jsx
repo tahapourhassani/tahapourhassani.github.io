@@ -78,7 +78,6 @@ function Resume() {
       <div className="resume-column">
         <h3 className="resume-label">Skills</h3>
         <dl className="skill-list"><div><dt>Programming</dt><dd>Python; C for AVR projects. Familiarity with C++ and C#.</dd></div><div><dt>Web &amp; data</dt><dd>WordPress theme editing, plugins and content design; MySQL.</dd></div><div><dt>Creative</dt><dd>AI image and video generation for social media and content creation.</dd></div><div><dt>Tools</dt><dd>VS Code, Navicat, Cisco Packet Tracer, CodeVision, Proteus, Microsoft Office; basic Adobe Photoshop.</dd></div></dl>
-        <h3 className="resume-label">Languages</h3><dl className="language-list"><div><dt>Persian &amp; Turkish</dt><dd>Native</dd></div><div><dt>English</dt><dd>Fluent · IELTS Academic 6.5</dd></div><div><dt>German</dt><dd>A2</dd></div></dl>
         <h3 className="resume-label">Leadership &amp; honors</h3>
         <article className="resume-entry"><p className="resume-date">2023–2025</p><h4>Head of Computer Engineering Scientific Association</h4><p>Islamic Azad University, Tabriz. Organised student workshops, seminars and academic events; coordinated student teams and communications.</p></article>
         <article className="resume-entry"><p className="resume-date">11th RINOTEX Technology Exhibition</p><h4>Selected University Representative</h4><p>Selected to represent Islamic Azad University, Tabriz.</p></article>
