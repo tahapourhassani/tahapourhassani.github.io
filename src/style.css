@@ -54,3 +54,7 @@
 @media(max-width:600px){.resume-grid::before{display:none}}
 
 .skill-list>div:not(:last-child){padding-bottom:19px;border-bottom:1px solid #ffffff10}
+
+/* Icon-only social profile links remain labelled for assistive technology. */
+.social-icons{display:flex;flex-wrap:wrap;gap:10px;max-width:422px;margin-top:3px}.social-icons a{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #ffffff24;border-radius:50%;color:#acc5c2;background:#10242a;transition:color .2s,border-color .2s,background .2s}.social-icons a:hover{color:#b5ffe2;background:#134032;border-color:#34d39988}.social-icons svg{display:block;flex-shrink:0}.contact-options{min-width:0}.social-icons a:focus-visible{outline:2px solid #34d399;outline-offset:4px}
+@media(max-width:900px){.social-icons{max-width:206px}}
